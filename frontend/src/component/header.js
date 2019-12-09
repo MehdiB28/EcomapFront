@@ -6,18 +6,18 @@ class Header extends Component{
 render(){
 return(
     <div>
-      <Navbar style={{backgroundColor:"black", color:"#FFFFFF"}} expand="md">
-            <NavbarBrand href="/">ECOMAP</NavbarBrand>
-              <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink href="">Link 1</NavLink>
+      <Navbar expand="md" color="ligth">
+            <img src="./logoEco.png"/>
+              <Nav className="mr-auto" navbar style={{color:"dark"}}>
+                <NavItem >
+                  <NavLink color="dark" href="">Link 1</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="">Link 2</NavLink>
                 </NavItem>
               </Nav>
       </Navbar>
-      <Jumbotron fluid style={{backgroundImage:'url("./home.jpg")',color:'white'}}>
+      <Jumbotron fluid style={{backgroundImage:'url("./home.jpg")',backgroundSize:'cover',color:'white',fontWeight:'bold'}}>
                     <Container fluid>
                     <h1 className="display-3">ECOMAP:L'ANNUAIRE DE L'ECOLOGIE EN FRANCE</h1>
                     </Container>

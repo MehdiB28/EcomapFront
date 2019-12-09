@@ -1,10 +1,21 @@
 import React,{Component} from 'react';
-import { CustomInput, Form, FormGroup, Label,Input,Button} from 'reactstrap';
+import { CustomInput, Form, FormGroup, Label,Input,Button,Col} from 'reactstrap';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+
+
+
 
 class Switch extends Component{
+
     render(){
+        
+
+  
 
         return(
+        <Col>
             <div>
                 <FormGroup>
                     <Input type="text" name="name" id="exampleName" placeholder="Amap..." ></Input>
@@ -16,11 +27,11 @@ class Switch extends Component{
 
                 <Button color="success" justify-content="center">Rechercher</Button>
                 
-             <div>
-                <FormGroup style={{marginTop:30}}>
-                        <Label for="exampleCustomRange">Distance</Label>
-                        <CustomInput type="range" id="exampleCustomRange" name="customRange" min="0" max="150" />
+                <FormGroup>
+                    <Label for="exampleCustomRange">Custom Range</Label>
+                    <CustomInput type="range" id="exampleCustomRange" name="customRange" />
                 </FormGroup>
+
 
                 <FormGroup style={{borderWidth:4,borderColor:"#27405C"}}>
                         <Label for="exampleCheckbox" style={{fontWeight:'bold'}}>Categories</Label>
@@ -34,7 +45,8 @@ class Switch extends Component{
                 </FormGroup>
 
             </div>
-        </div>
+       
+        </Col>
         )};
 };
 
