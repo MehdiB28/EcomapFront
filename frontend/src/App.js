@@ -4,6 +4,7 @@ import Header from "./component/header";
 import Cards from './component/cards';
 import Switch from './component/switches';
 import Mapp from './component/map';
+import Footerf from './component/footer'
 import './index.css'
 
 
@@ -46,7 +47,9 @@ return (
             
               </Row>  
         </Container>
-
+        <div>
+          <Footerf/>
+        </div>
   </div>
 )
 

@@ -17,7 +17,7 @@ return(
                 </NavItem>
               </Nav>
       </Navbar>
-      <Jumbotron fluid style={{backgroundImage:'url("./home.jpg")',backgroundSize:'cover',color:'white',fontWeight:'bold'}}>
+      <Jumbotron fluid style={{backgroundImage:'url("./home.jpg")',backgroundSize:'cover',color:'white',fontWeight:'bold',marginBottom:0}}>
                     <Container fluid>
                     <h1 className="display-3">ECOMAP:L'ANNUAIRE DE L'ECOLOGIE EN FRANCE</h1>
                     </Container>

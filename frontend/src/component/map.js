@@ -3,27 +3,38 @@ import {Button} from 'reactstrap';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 
 class Mapp extends Component{
-      
+      constructor(){
+            super();
+            this.state={open:false}
+      }
+
+
 render(){
 
 const Map = ReactMapboxGl({
             accessToken:
-              'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
+              'pk.eyJ1IjoibWVoZGliZXJyYSIsImEiOiJjazN6cjMxbmsweHRwM2xwNm55M2FkYzI3In0.JybnKPtc0YiizYCRpWTsmA'
           });
-        
+var style;
+
+if(this.state.open){
+      style={height: '100vh',width: '100vw'}
+}else{
+      style={height:'20vh',width:'100vw',opacity:0.5}
+}      
 return(
       <div>
+            <Button color='success'onClick={()=>{this.setState({open:!this.state.open})}} style={{position:'relative',marginTop:40,marginLeft:10}}>Accès à la map </Button>
             <Map style={{}}
                   style="mapbox://styles/mapbox/streets-v9"
-                  containerStyle={{
-                  height: '100vh',
-                  width: '100vw'
-                  }}
+                  containerStyle={
+                  style
+                  }
                   >
                   <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
                   <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
                   </Layer>
-            </Map>;
+            </Map>
       </div>
 )
 
