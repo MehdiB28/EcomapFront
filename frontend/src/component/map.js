@@ -8,7 +8,6 @@ class Mapp extends Component{
             this.state={open:false}
       }
 
-
 render(){
 
 const Map = ReactMapboxGl({
@@ -25,12 +24,7 @@ if(this.state.open){
 return(
       <div>
             <Button color='success'onClick={()=>{this.setState({open:!this.state.open})}} style={{position:'relative',marginTop:40,marginLeft:10}}>Accès à la map </Button>
-            <Map style={{}}
-                  style="mapbox://styles/mapbox/streets-v9"
-                  containerStyle={
-                  style
-                  }
-                  >
+            <Map style={{}} style="mapbox://styles/mapbox/streets-v9" containerStyle={style}>
                   <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
                   <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
                   </Layer>
