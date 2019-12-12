@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Container,Collapse,Button,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem,Jumbotron} from 'reactstrap';
+import {Container,Navbar,Nav,NavItem,NavLink,Jumbotron} from 'reactstrap';
 import ModalForm from './modalForm'
 
 class Header extends Component{
@@ -7,7 +7,7 @@ render(){
 return(
     <div>
       <Navbar expand="md" color="ligth">
-            <img src="./logoEco.png"/>
+            <img src="./logoEco.png" alt="ecomap logo"/>
               <Nav className="mr-auto" navbar style={{color:"dark"}}>
                 <ModalForm/>
                 <NavItem >

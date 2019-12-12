@@ -21,7 +21,7 @@ const ModalForm = (props) => {
           <Form/>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>Valider</Button>{' '}
+          <Button color="success" onClick={toggle}>Valider</Button>{' '}
           <Button color="secondary" onClick={toggle}>Annuler</Button>
         </ModalFooter>
       </Modal>

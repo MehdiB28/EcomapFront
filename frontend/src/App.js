@@ -4,20 +4,23 @@ import Header from "./component/header";
 import Cards from './component/cards';
 import Switch from './component/switches';
 import Mapp from './component/map';
-import Footerf from './component/footer'
+import Footerf from './component/footer';
+import Choice from './component/choice';
+import RangeSlider from './component/slider'
 import './index.css'
+
 
 
 
 class App extends Component{
 render(){
 
-  var cardData=[{name:"Ecolo1",adresse:"2 rue Léon Blum",desc:"vente de produit Bio"},{name:"Ecolo2",adresse:"2 rue Léon Blum",desc:"vente de produit Bio"},{name:"Ecolo2'",adresse:"2 rue Léon Blum",desc:"vente de produit Bio"}];
+  var cardData=[{name:"Ecolo1",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"AMAP"},{name:"Ecolo2",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"Alimentation"},{name:"Ecolo2'",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"Caritative"}];
   var cardList=cardData.map(function(card,i){
-   return <Cards cardName={card.name} cardAdress={card.adresse} cardDesc={card.desc} key={i}/>
+   return <Cards cardName={card.name} cardAdress={card.adresse} cardDesc={card.desc} cardCat={card.category} key={i}/>
   })
 
-
+  
 
 return (
 
@@ -32,11 +35,14 @@ return (
         </div>
         
 
-        <Container style={{marginTop:10}}>
+        <Container style={{marginTop:25}}>
           <Row>
              
                         <Col xs={3}>
                           <Switch/>
+                          <RangeSlider/>
+                          <Choice/>
+                          
                         </Col>
         
                         <Col>

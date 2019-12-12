@@ -17,15 +17,15 @@ const Map = ReactMapboxGl({
 var style;
 
 if(this.state.open){
-      style={height: '100vh',width: '100vw'}
+      style={height: '75vh',width: '100vw'}
 }else{
-      style={height:'20vh',width:'100vw',opacity:0.5}
+      style={height:'20vh',width:'100vw',opacity:0.5,WebkitFilter:'contrast(50%)'}
 }      
 return(
       <div>
-            <Button color='success'onClick={()=>{this.setState({open:!this.state.open})}} style={{position:'relative',marginTop:40,marginLeft:10}}>Accès à la map </Button>
+            <Button color='success'onClick={()=>{this.setState({open:!this.state.open})}} style={{position:'absolute',zIndex:15,marginTop:40,marginLeft:10}}>Accès à la map </Button>
             <Map style={{}} style="mapbox://styles/mapbox/streets-v9" containerStyle={style}>
-                  <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
+                  <Layer type="symbol" id="marker" layout={{ 'icon-image': 'harbor-15' }}>
                   <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
                   </Layer>
             </Map>

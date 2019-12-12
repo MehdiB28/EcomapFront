@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import {transform} from 'transformation-matrix';
+
 
 class Footerf extends React.Component{
 
     render(){
         return(
     
-<MDBFooter style={{color:'white',backgroundColor:'grey',marginTop:'30px', paddingTop:"10px",borderTop:"1 solid grey",justifyContent:'space-between'}}>
+<MDBFooter style={{color:'white',backgroundColor:'green', opacity:"0.7",marginTop:'30px', paddingTop:"10px",borderTop:"1 solid grey",justifyContent:'space-between'}}>
       <MDBContainer>
         <MDBRow>
           <MDBCol md="4">
