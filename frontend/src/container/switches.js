@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
-// import RangeSlider from './slider';
-import { CustomInput, Form, FormGroup, Label,Input,Button,Col} from 'reactstrap';
-import InputRange from 'react-input-range';
-import { flexbox } from '@material-ui/system';
+import {FormGroup,Input,Button,Col} from 'reactstrap';
+
 
 
 class Switch extends Component{

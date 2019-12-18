@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 
-class Footerf extends React.Component{
+class Footerf extends Component{
 
     render(){
         return(
@@ -33,7 +33,7 @@ class Footerf extends React.Component{
             </ul>
           </MDBCol>
           <MDBCol md="4">
-              <img src="./logoEco.png"/>
+              <img src="./logoEco.png" alt="logo Ecomap"/>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

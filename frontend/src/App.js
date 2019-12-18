@@ -1,26 +1,26 @@
 import React,{Component} from 'react';
 import {Container, Row,Col} from 'reactstrap';
 import Header from "./component/header";
-import Cards from './component/cards';
-import Switch from './component/switches';
-import Mapp from './component/map';
+import Switch from './container/switches';
+import Mapp from './container/map';
 import Footerf from './component/footer';
-import Choice from './component/choice';
-import RangeSlider from './component/slider'
+import Choice from './container/choice';
+import RangeSlider from './container/slider'
+import CardsList from './container/cardsList'
 import './index.css'
 
-
-
-
+ 
 class App extends Component{
+    constructor(props){
+      super(props)
+      global.IP='10.2.4.48'
+      //192.168.1.13
+      //10.2.4.48
+  }
+
 render(){
-
-  var cardData=[{name:"Ecolo1",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"AMAP"},{name:"Ecolo2",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"Alimentation"},{name:"Ecolo2'",adresse:"2 rue Léon Blum",desc:"vente de produit Bio",category:"Caritative"}];
-  var cardList=cardData.map(function(card,i){
-   return <Cards cardName={card.name} cardAdress={card.adresse} cardDesc={card.desc} cardCat={card.category} key={i}/>
-  })
-
   
+
 
 return (
 
@@ -47,8 +47,9 @@ return (
         
                         <Col>
                           <Row xs={{offset:3}}>
-                          {cardList}
+                            <CardsList/>
                           </Row>
+                        
                         </Col>
             
               </Row>  
