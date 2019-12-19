@@ -1,16 +1,16 @@
 // import React,{Component} from 'react';
 // import Cards from '../container/cards'
 // import {Container, Row} from 'reactstrap';
-// // import {connect} from 'react-redux';
-// // import {setCards} from '../actions';
-// // import {bindActionCreators} from 'redux';
+// import {connect} from 'react-redux';
+// import {setCards} from '../actions';
+// import {bindActionCreators} from 'redux';
 
 
 // class CardsList extends Component{
     
-//     // componentWillMount(){
-//     //     this.props.setCards();
-//     // }
+//     componentWillMount(){
+//         this.props.setCards();
+//     }
 
 
 //     render(){
@@ -28,18 +28,18 @@
 //     }
 // };
 
-// // function mapDispatchToProps(dispatch){
-// //     return bindActionCreators (
-// //         {setCards:setCards},
-// //         dispatch
-// //     );
-// // }
+// function mapDispatchToProps(dispatch){
+//     return bindActionCreators (
+//         {setCards:setCards},
+//         dispatch
+//     );
+// }
 
-// // function mapStateToprops(state){
-// //     return {
-// //         dataCard:state.dataCard
-// //     }
-// // }
+// function mapStateToprops(state){
+//     return {
+//         dataCard:state.dataCard
+//     }
+// }
 
 // export default CardsList;
-// // export default connect (mapStateToprops,mapDispatchToProps)(CardsList);
+// export default connect (mapStateToprops,mapDispatchToProps)(CardsList);

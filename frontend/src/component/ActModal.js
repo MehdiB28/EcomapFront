@@ -13,7 +13,7 @@ const ActModal = (props) => {
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}>Ajouter une activité</Button>
+      <Button color="success" onClick={toggle}>Ajouter une activité</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Ajouter une activité</ModalHeader>
         <ModalBody>

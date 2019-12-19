@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Container,Navbar,Nav,NavLink,Jumbotron} from 'reactstrap';
+import {Container,Navbar,Nav,NavLink,Jumbotron, Button} from 'reactstrap';
 import ActModal from './ActModal'
 import IDModal from './IDModal'
 import SIModal from './SIModal'
@@ -9,18 +9,17 @@ class Header extends Component{
 render(){
 return(
     <div>
-      <Navbar expand="md" color="ligth">
+      <Navbar color="light" expand="md" >
             <img src="./logoEco.png" alt="logo Ecomap"/>
               <Nav className="mr-auto" navbar style={{color:"dark"}}>
                 <ActModal/>
               </Nav>
               
-              <NavLink><IDModal/></NavLink>
-              <NavLink><SIModal/></NavLink>
+              <NavLink><Button color="success" href='/'>Se déconnecter</Button></NavLink>
       </Navbar>
-      <Jumbotron fluid style={{backgroundImage:'url("./home.jpg")',backgroundSize:'cover',color:'white',fontWeight:'bold',marginBottom:0}}>
+      <Jumbotron fluid style={{backgroundImage:'url("./legumes.jpg")',backgroundSize:'cover',color:'white',fontWeight:'bold',marginBottom:0}}>
                     <Container fluid>
-                    <h1 className="display-3">ECOMAP:L'ANNUAIRE DE L'ECOLOGIE EN FRANCE</h1>
+                    <h1 className="display-3">ECOMAP:L'ANNUAIRE ECORESPONSABLE ET LOCAL</h1>
                     </Container>
        </Jumbotron>
      

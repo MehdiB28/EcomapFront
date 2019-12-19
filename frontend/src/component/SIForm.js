@@ -58,7 +58,7 @@ class SIForm extends Component{
             </Col>
             <Col md={12}>
                 <FormGroup>
-                <Button onClick={this.handleSubmitSignIn} style={{width:'80px'}} type="primary">Sign-in</Button>
+                <Button href='/homepage' style={{width:'100px',marginLeft:'40%',borderRadius:25}}  color="success" type="primary">Valider</Button>
                 </FormGroup>
             </Col>
                 </Row>

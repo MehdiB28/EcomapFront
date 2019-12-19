@@ -13,10 +13,10 @@ class Footerf extends Component{
           <MDBCol md="4">
             <h5>ECOMAP</h5>
             <p>
-              L'agriculture seine à côté de chez vous.
+              L'agriculture saine à côté de chez vous.
             </p>
             <h3>Adresse</h3>
-            <p>126 Rue Saint-Denis 75 002 Paris</p>
+            <p>151 Rue Saint-Denis 75002 Paris</p>
           </MDBCol>
           <MDBCol md="4">
               <img src="./logoEco.png" alt="logo Ecomap"/>

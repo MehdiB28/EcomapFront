@@ -13,7 +13,7 @@ const SIModal = (props) => {
   
     return (
       <div>
-        <Button color="danger" onClick={toggle}>S'identifier</Button>
+        <Button color="success" onClick={toggle}>S'identifier</Button>
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle}>S'identifier</ModalHeader>
           <ModalBody>

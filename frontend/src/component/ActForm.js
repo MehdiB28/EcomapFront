@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { Col, Button, Form, FormGroup, Label, Input,Row, FormText } from 'reactstrap';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import ImageUploader from 'react-images-upload';
 
 
@@ -20,7 +20,7 @@ class ActForm extends Component {
       Desc: '',
       pictures:'',
     };
-    this.form = React.createRef();
+    // this.form = React.createRef();
   }
 
   
@@ -28,42 +28,42 @@ class ActForm extends Component {
 
     console.log('bouton ok')
   
-    var data = new FormData(ReactDOM.findDOMNode(this.form.current));
+    // var data = new FormData(ReactDOM.findDOMNode(this.form.current));
 
-    fetch(`http://${global.IP}:3000/newAct`, {
-      method: 'POST',
-      body: data
-    })
+    // fetch(`http://${global.IP}:3000/newAct`, {
+    //   method: 'POST',
+    //   body: data
+    // })
 
-    console.log(data)
+    // console.log(data)
     // .then(res=>res.json())
     // .then(data=> alert(JSON.stringify(data,null,'/TT')));
 
 
-  //   fetch(`http://${global.IP}:3000/newAct`, {
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-  //     body: `category=${this.state.category}&name=${this.state.name}&address=${this.state.address}&zipCode=${this.state.zipCode}&city=${this.state.city}&phone=${this.state.phone}&Desc=${this.state.Desc}`
-  //   })
-  //   .then(function(res, err){
-  //     return res.json()
-  //     })
-  //   .then(data => {
-  //     console.log('dans mon fetch', data)
-  //   })
+    fetch(`http://${global.IP}:3000/newAct`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: `category=${this.state.category}&name=${this.state.name}&address=${this.state.address}&zipCode=${this.state.zipCode}&city=${this.state.city}&phone=${this.state.phone}&Desc=${this.state.Desc}`
+    })
+    .then(function(res, err){
+      return res.json()
+      })
+    .then(data => {
+      console.log('dans mon fetch', data)
+    })
 
     
-  //   .catch(function(error){
-  //     console.log('request failed', error)
-  //   });
+    .catch(function(error){
+      console.log('request failed', error)
+    });
 
-  //   window.location.reload()
-  // }
+    window.location.reload()
+  }
 
-  // onDrop=(picture)=>{
-  //   this.setState({
-  //     pictures:this.state.pictures.concat(picture)
-  //   })
+  onDrop=(picture)=>{
+    this.setState({
+      pictures:this.state.pictures.concat(picture)
+    })
     
   }
 
@@ -151,16 +151,16 @@ class ActForm extends Component {
                   maxFileSize={5252880}
                   /> */}
 
-                  <FormGroup>
-                    <Input type="file" name="pictures" onChange={(e) => this.setState({pictures: e.target.files})}/>
-                  </FormGroup>
+                  {/* <FormGroup>
+                    <Input type="file" name="picture" onChange={(e) => this.setState({pictures: e.target.files})}/>
+                  </FormGroup> */}
                   </Form>
                   <FormGroup>
                   <Button onClick={this.handleSubmitNewAct} style={{width:'100px',marginLeft:'40%',borderRadius:25}} type="button" color="primary">Valider</Button>
                   </FormGroup>
                 
                 <FormText>
-                (*) Champs à remplir pour une meilleure information
+                (*) Champs à remplir pour une information optimale
                 </FormText>
                 </div>
             );

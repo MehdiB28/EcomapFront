@@ -100,7 +100,7 @@ class IDForm extends Component{
         </Col>
         <Col md={12}>
           <FormGroup>
-          <Button onClick={this.handleSubmitSignUp} style={{width:'100px'}} type="primary">Sign-up</Button>
+          <Button onClick={this.handleSubmitSignUp} style={{width:'100px',marginLeft:'40%',borderRadius:25}}  color="success" type="primary">Valider</Button>
           </FormGroup>
         </Col>
         </Row>

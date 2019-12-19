@@ -13,7 +13,7 @@ const IDModal = (props) => {
   
     return (
       <div>
-        <Button color="danger" onClick={toggle}>S'inscrire</Button>
+        <Button color="success" onClick={toggle}>S'inscrire</Button>
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle}>S'inscrire</ModalHeader>
           <ModalBody>

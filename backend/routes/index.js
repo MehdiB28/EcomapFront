@@ -88,7 +88,7 @@ router.post('/sign-up', async function(req, res, next) {
 router.get('/activites',  function(req, res, next){
   shopModel.find(
     function(err, shops){
-  console.log("---> lists des shops",shops)
+  // console.log("---> lists des shops",shops)
   res.json(shops)
  })
  
@@ -160,25 +160,25 @@ router.post('/newAct', async function(req, res, next) {
   console.log('data from front', req.body)
 
 
-  var extention;
-    if(req.files.pictures.mimetype == "image/jpeg") {
-      extention = 'jpg';
-    } else if(req.files.pictures.mimetype == "image/png") {
-      extention = 'png';
-    }
+  // var extention;
+  //   if(req.files.pictures.mimetype == "image/jpeg") {
+  //     extention = 'jpg';
+  //   } else if(req.files.pictures.mimetype == "image/png") {
+  //     extention = 'png';
+  //   }
 
-    if(extention) {
-      var photoPath=('./public/images/'+req.files.pictures.name+'.'+extention,
+  //   if(extention) {
+  //     var photoPath=('./public/images/'+req.files.pictures.name+'.'+extention,
    
-        function(err) {
-          if (err) {
-            res.json({result: false, message: err} );
-          } else {
-            res.json({result: true, message: 'File uploaded!'} );
-          } 
-        }
-      );
-    }
+  //       function(err) {
+  //         if (err) {
+  //           res.json({result: false, message: err} );
+  //         } else {
+  //           res.json({result: true, message: 'File uploaded!'} );
+  //         } 
+  //       }
+  //     );
+  //   }
 
   const newShop = new shopModel({
     category: req.body.category,
@@ -188,7 +188,7 @@ router.post('/newAct', async function(req, res, next) {
     city: req.body.city,
     phone: req.body.phone,
     Desc: req.body.Desc,
-    pictures: req.files.pictures.mv(photoPath)
+    pictures: req.body.pictures
   });
 
   const saveShop = await newShop.save()
