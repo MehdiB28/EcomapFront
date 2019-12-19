@@ -16,7 +16,7 @@ class Switch extends Component{
                 </FormGroup>
 
                 <FormGroup>
-                    <Input type="text" name="name" id="exampleName" placeholder="Ville..." ></Input>
+                    <Input type="text" name="name" id="exampleNameA" placeholder="Ville..." ></Input>
                 </FormGroup>
 
                 <Button color="danger">Rechercher</Button>

@@ -9,6 +9,17 @@ var SHA256 = require("crypto-js/sha256");
 var encBase64 = require("crypto-js/enc-base64");
 
 
+//CLOUDINARY
+
+var cloudinary=require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name:'dsnbfizry',
+  api_key: 548981482144822,
+  api_secret: 'xMrlDKLLtNTtDynBSdUMNQdDtT4'
+})
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -148,6 +159,27 @@ router.get('/activites/AB',  function(req, res, next){
 router.post('/newAct', async function(req, res, next) {
   console.log('data from front', req.body)
 
+
+  var extention;
+    if(req.files.pictures.mimetype == "image/jpeg") {
+      extention = 'jpg';
+    } else if(req.files.pictures.mimetype == "image/png") {
+      extention = 'png';
+    }
+
+    if(extention) {
+      var photoPath=('./public/images/'+req.files.pictures.name+'.'+extention,
+   
+        function(err) {
+          if (err) {
+            res.json({result: false, message: err} );
+          } else {
+            res.json({result: true, message: 'File uploaded!'} );
+          } 
+        }
+      );
+    }
+
   const newShop = new shopModel({
     category: req.body.category,
     name: req.body.name,
@@ -156,8 +188,8 @@ router.post('/newAct', async function(req, res, next) {
     city: req.body.city,
     phone: req.body.phone,
     Desc: req.body.Desc,
-    pictures:req.body.pictures
-  })
+    pictures: req.files.pictures.mv(photoPath)
+  });
 
   const saveShop = await newShop.save()
 

@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import {Button} from 'reactstrap';
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
+import ReactMapboxGl, {Feature, Marker } from 'react-mapbox-gl';
+// import {connect} from 'react-redux';
+
 
 class Mapp extends Component{
       constructor(){
@@ -25,9 +27,21 @@ return(
       <div>
             <Button color='success'onClick={()=>{this.setState({open:!this.state.open})}} style={{position:'absolute',zIndex:15,marginTop:40,marginLeft:10}}>Accès à la map </Button>
             <Map style={{}} style="mapbox://styles/mapbox/streets-v9" containerStyle={style}>
-                  <Layer type="symbol" id="marker" layout={{ 'icon-image': 'harbor-15' }}>
-                  <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
-                  </Layer>
+                  
+                  
+            <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
+                  {/* {this.props.dataCard.map((shop,i)=>(
+                  
+                  <Marker
+                  key={i}
+                  latitude={this.props.dataCard.latitude}
+                  longitude={this.props.dataCard.longitude}>
+                  <button className="marker-btn">
+                        <img src='/seedling-solid.svg' alt='pin'></img>
+                  </button>
+                  </Marker>
+                  ))} */}
+                  
             </Map>
       </div>
 )
@@ -35,4 +49,12 @@ return(
 
 }};
 
+// var mapStateToProps = (state) => {
+//       return {
+//         choice: state.dataCard
+//       };
+//     };
+
 export default Mapp;
+
+// export default connect (mapStateToProps) (Mapp);

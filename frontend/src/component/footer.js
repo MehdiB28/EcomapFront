@@ -19,20 +19,6 @@ class Footerf extends Component{
             <p>126 Rue Saint-Denis 75 002 Paris</p>
           </MDBCol>
           <MDBCol md="4">
-            <h5>Nous connaitre</h5>
-            <ul>
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-            </ul>
-          </MDBCol>
-          <MDBCol md="4">
               <img src="./logoEco.png" alt="logo Ecomap"/>
           </MDBCol>
         </MDBRow>

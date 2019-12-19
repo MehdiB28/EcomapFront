@@ -61,7 +61,7 @@ if(this.props.category==="AMAP"){
       <Col xs={12} sm={9} md={6} lg={4}>
    
             <Card style={{marginBottom:30,borderRadius: 10,boxShadow: "0px 10px 30px 0px rgba(0, 0, 0, 0.1)"}}>
-            <CardImg top width="100%" src="./home.jpg" alt="Card image cap" style={{borderRadius: "10px 10px 0px 0px"}} />
+            <CardImg top width="100%" src="{this.props.pictures}" alt="Card image cap" style={{borderRadius: "10px 10px 0px 0px"}} />
                 <CardBody>
                 <CardTitle><h1>{this.props.name}</h1></CardTitle>
                 <CardSubtitle style={{fontSize:20}}><h5>{this.props.city}</h5></CardSubtitle>
@@ -95,3 +95,4 @@ if(this.props.category==="AMAP"){
 // export default connect (null, aliStatetoprops)(Cards); 
 
 export default Cards;
+
